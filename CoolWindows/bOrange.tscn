@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://6c1f7wm4xmmy"]
+
+[ext_resource type="Script" uid="uid://bgnsqv08qqwo" path="res://CoolWindows/b_orange.gd" id="1_nn038"]
+
+[node name="Orange" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+script = ExtResource("1_nn038")
+chart_name = null
+stop_chart_execution = null
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -11.0
+offset_right = 232.0
+offset_bottom = 219.0
+color = Color(0.9490196, 0.5019608, 0.3254902, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 200.0
+offset_bottom = 200.0
+alignment = 1
+
+[node name="LeftSide" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="RightSide" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1

@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://43citiv2c0wo"]
+
+[ext_resource type="Script" uid="uid://s0oajmkm6p2m" path="res://Scripts/a_red.gd" id="1_u3iw8"]
+
+[node name="Red" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+script = ExtResource("1_u3iw8")
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -23.0
+offset_top = -15.0
+offset_right = 273.0
+offset_bottom = 230.0
+color = Color(0.92156863, 0.36078432, 0.3647059, 1)
+
+[node name="Directions" type="Node2D" parent="."]
+
+[node name="Left" type="Polygon2D" parent="Directions"]
+modulate = Color(1, 1, 1, 0)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(5, 10, 5, 190, 95, 100)
+
+[node name="Down" type="Polygon2D" parent="Directions"]
+modulate = Color(1, 1, 1, 0)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(10, 195, 190, 195, 100, 105)
+
+[node name="Up" type="Polygon2D" parent="Directions"]
+modulate = Color(1, 1, 1, 0)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(10, 5, 190, 5, 100, 95)
+
+[node name="Right" type="Polygon2D" parent="Directions"]
+modulate = Color(1, 1, 1, 0)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(195, 10, 195, 190, 105, 100)

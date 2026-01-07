@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://cn7fkfa4xrltx"]
+
+[ext_resource type="Script" uid="uid://dp64bpwinx6iw" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://cpgsk4y46oioh" path="res://icon.png" id="1_iqhi8"]
+[ext_resource type="AudioStream" uid="uid://bkqo55udgqp24" path="res://Wavetapper.ogg" id="2_5vw27"]
+[ext_resource type="PackedScene" uid="uid://43citiv2c0wo" path="res://CoolWindows/aRed.tscn" id="2_272bh"]
+[ext_resource type="PackedScene" uid="uid://6c1f7wm4xmmy" path="res://CoolWindows/bOrange.tscn" id="3_5vw27"]
+[ext_resource type="PackedScene" uid="uid://d0ewuvui7qbxc" path="res://CoolWindows/lPurple.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://1f5l0o1vpaxx" path="res://CoolWindows/cYellow.tscn" id="4_kek77"]
+[ext_resource type="PackedScene" uid="uid://bf5snfvnhplvh" path="res://CoolWindows/dDarkYellow.tscn" id="5_4c57u"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_h2yge")
+
+[node name="Wavetapper" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5vw27")
+autoplay = true
+
+[node name="Windows" type="Node" parent="."]
+
+[node name="Red" parent="Windows" instance=ExtResource("2_272bh")]
+visible = false
+chart_name = "red"
+
+[node name="Orange" parent="Windows" instance=ExtResource("3_5vw27")]
+visible = false
+chart_name = "orange"
+
+[node name="Yellow" parent="Windows" instance=ExtResource("4_kek77")]
+visible = false
+stop_chart_execution = true
+
+[node name="DarkYellow" parent="Windows" instance=ExtResource("5_4c57u")]
+visible = false
+stop_chart_execution = true
+
+[node name="Purple" parent="Windows" instance=ExtResource("3_h2yge")]
+position = Vector2i(720, 480)
+visible = false
+stop_chart_execution = true
+
+[node name="Positions" type="HFlowContainer" parent="."]
+offset_right = 920.0
+offset_bottom = 920.0
+theme_override_constants/h_separation = 40
+theme_override_constants/v_separation = 40
+alignment = 1
+
+[node name="Red" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.92156863, 0.36078432, 0.3647059, 1)
+
+[node name="Orange" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.9490196, 0.5019608, 0.3254902, 1)
+
+[node name="Yellow" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.9843137, 0.88235295, 0.2509804, 1)
+
+[node name="DarkYellow" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.7058824, 0.84313726, 0.14117648, 1)
+
+[node name="Control5" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.33333334, 0.7607843, 0.09803922, 1)
+
+[node name="Control6" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.16078432, 0.7019608, 0.34509805, 1)
+
+[node name="Control7" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.16078432, 0.7019608, 0.5254902, 1)
+
+[node name="Control8" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.15686275, 0.7019608, 0.6117647, 1)
+
+[node name="Control9" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.14901961, 0.7058824, 0.85490197, 1)
+
+[node name="Control10" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.11764706, 0.43137255, 0.80784315, 1)
+
+[node name="Control11" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.21568628, 0.12156863, 0.7607843, 1)
+
+[node name="Purple" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.5058824, 0.1254902, 0.88235295, 1)
+
+[node name="Control13" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.7294118, 0.19215687, 0.8862745, 1)
+
+[node name="Control14" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.85882354, 0.20784314, 0.65882355, 1)
+
+[node name="Control15" type="ColorRect" parent="Positions"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.8235294, 0.13725491, 0.49411765, 1)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(930, 613)
+texture = ExtResource("1_iqhi8")
+centered = false
