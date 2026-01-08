@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://6c1f7wm4xmmy" path="res://CoolWindows/bOrange.tscn" id="3_5vw27"]
 [ext_resource type="PackedScene" uid="uid://d0ewuvui7qbxc" path="res://CoolWindows/lPurple.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://1f5l0o1vpaxx" path="res://CoolWindows/cYellow.tscn" id="4_kek77"]
-[ext_resource type="PackedScene" uid="uid://bf5snfvnhplvh" path="res://CoolWindows/dDarkYellow.tscn" id="5_4c57u"]
+[ext_resource type="PackedScene" uid="uid://bf5snfvnhplvh" path="res://CoolWindows/dLime.tscn" id="5_4c57u"]
 [ext_resource type="PackedScene" uid="uid://lmy8trn4hkyw" path="res://CoolWindows/eGreen.tscn" id="7_kek77"]
 [ext_resource type="PackedScene" uid="uid://bms1ventlo0fw" path="res://CoolWindows/fGreen.tscn" id="8_4c57u"]
 
