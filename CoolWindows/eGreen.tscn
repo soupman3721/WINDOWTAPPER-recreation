@@ -1,0 +1,212 @@
+[gd_scene load_steps=10 format=3 uid="uid://lmy8trn4hkyw"]
+
+[ext_resource type="Script" uid="uid://dniuxpdui00aw" path="res://Scripts/e_green.gd" id="1_06ikl"]
+
+[sub_resource type="Animation" id="Animation_uh4kv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1j4sw"]
+resource_name = "j"
+step = 0.01
+
+[sub_resource type="Animation" id="Animation_06ikl"]
+resource_name = "5"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(190, 100), Vector2(190, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouth:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_3hoqb"]
+resource_name = "4"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(170, 100), Vector2(170, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouth:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_3y22v"]
+resource_name = "3"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(150, 100), Vector2(150, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouth:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(25, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_7bp5q"]
+resource_name = "2"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(130, 100), Vector2(130, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouth:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(35, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_ggq0v"]
+resource_name = "1"
+length = 0.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mouth:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [Vector2(100, 100), Vector2(100, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mouth:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(50, 100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7edmr"]
+_data = {
+&"1": SubResource("Animation_ggq0v"),
+&"2": SubResource("Animation_7bp5q"),
+&"3": SubResource("Animation_3y22v"),
+&"4": SubResource("Animation_3hoqb"),
+&"5": SubResource("Animation_06ikl"),
+&"RESET": SubResource("Animation_uh4kv"),
+&"j": SubResource("Animation_1j4sw")
+}
+
+[node name="Green" type="Window"]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+script = ExtResource("1_06ikl")
+position_offset = Vector2i(0, -30)
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 204.0
+offset_bottom = 204.0
+color = Color(0.33333334, 0.7607843, 0.09803922, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7edmr")
+}
+
+[node name="Mouth" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_right = -50.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.39215687)

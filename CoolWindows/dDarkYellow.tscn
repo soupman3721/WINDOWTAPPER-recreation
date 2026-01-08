@@ -1,6 +1,79 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf5snfvnhplvh"]
+[gd_scene load_steps=7 format=3 uid="uid://bf5snfvnhplvh"]
 
-[ext_resource type="Script" uid="uid://b5vuchr8iiva0" path="res://Classes/EventableWindow.gd" id="1_1j4sw"]
+[ext_resource type="Script" uid="uid://chlgmu7miqq87" path="res://Scripts/d_dark_yellow.gd" id="1_1j4sw"]
+
+[sub_resource type="Animation" id="Animation_uh4kv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Circle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1j4sw"]
+resource_name = "j"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.76, 1),
+"transitions": PackedFloat32Array(2.143547, 0.46651655, 1.5691681, 1),
+"update": 0,
+"values": [Vector2i(0, -30), Vector2i(0, 0), Vector2i(0, -15), Vector2i(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Circle:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7edmr"]
+_data = {
+&"RESET": SubResource("Animation_uh4kv"),
+&"j": SubResource("Animation_1j4sw")
+}
+
+[sub_resource type="Gradient" id="Gradient_1j4sw"]
+offsets = PackedFloat32Array(0.99333334, 1)
+colors = PackedColorArray(1, 1, 1, 0.39215687, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uh4kv"]
+gradient = SubResource("Gradient_1j4sw")
+width = 200
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.82, 0.7)
 
 [node name="DarkYellow" type="Window"]
 oversampling_override = 1.0
@@ -9,3 +82,20 @@ unresizable = true
 always_on_top = true
 script = ExtResource("1_1j4sw")
 metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 204.0
+offset_bottom = 204.0
+color = Color(0.7058824, 0.84313726, 0.14117648, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7edmr")
+}
+
+[node name="Circle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+texture = SubResource("GradientTexture2D_uh4kv")

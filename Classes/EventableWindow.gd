@@ -17,7 +17,7 @@ var origin_position: Vector2i:
 	set(value):
 		origin_position = value
 		position = value
-var position_offset: Vector2i:
+@export var position_offset: Vector2i:
 	set(value):
 		position = origin_position + value
 		position_offset = value
@@ -31,7 +31,23 @@ func impulse_position(impulse: Vector2i, length: float = 0.25):
 	current_tween.play()
 	current_tween.tween_callback(func(): position_offset = Vector2i.ZERO)
 
+func move_to_offset(
+	offset: Vector2i,
+	duration: float = 0.25,
+	ease_type: Tween.EaseType = Tween.EASE_IN_OUT,
+	transition: Tween.TransitionType = Tween.TRANS_CUBIC
+	):
+	
+	if current_tween:
+		current_tween.kill()
+	current_tween = get_tree().create_tween().set_ease(ease_type).set_trans(transition)
+	current_tween.tween_property(self, "position_offset", offset, duration)
+	current_tween.play()
+
 var events: Dictionary[String, Callable] = {}
+
+var previous_event: String
+var current_event: String
 
 func set_event(ev_name: String, ev_callback: Callable):
 	events.set(ev_name, ev_callback)
@@ -42,6 +58,7 @@ func dot_event():
 func execute_event(ev_name: String):
 	if ev_name == ".":
 		dot_event()
+		return
 	if !events.has(ev_name):
 		printerr("No event of tag: %s" % ev_name)
 		return
@@ -51,14 +68,24 @@ func execute_event(ev_name: String):
 func _on_step_hit(step: int, section: int):
 	if stop_chart_execution: return
 	if !is_node_ready(): await ready
+	
 	if chart["sections"][section] == -2:
+		current_event = "."
+		dot_event()
+		previous_event = "."
 		return
 	if chart["sections"][section] == -1:
 		if step == 0:
 			execute_event("V")
+		
+		previous_event = "V"
 		return
 	
-	execute_event(chart["section_charts"][chart["sections"][section]][step])
+	current_event = chart["section_charts"][chart["sections"][section]][step]
+	
+	execute_event(current_event)
+	
+	previous_event = current_event
 
 func _ready() -> void:
 	set_event("V", func(): visible = !visible)

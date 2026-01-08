@@ -14,7 +14,7 @@ var step: int = 0:
 func _unhandled_input(event: InputEvent) -> void:
 	if !event.is_pressed(): return
 	#$Windows/Red.execute_event(event.as_text())
-	#$Windows/Purple.execute_event(event.as_text())
+	$Windows/Purple.execute_event(event.as_text())
 
 func _ready() -> void:
 	step_hit.emit(step, section)

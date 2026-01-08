@@ -18,17 +18,93 @@ offset_right = 232.0
 offset_bottom = 219.0
 color = Color(0.9490196, 0.5019608, 0.3254902, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 200.0
-offset_bottom = 200.0
-alignment = 1
+[node name="NoteContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 190.0
 
-[node name="LeftSide" type="VBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
+[node name="LeftSide" type="Control" parent="NoteContainer"]
+anchors_preset = 0
+offset_right = 85.0
+offset_bottom = 180.0
 size_flags_horizontal = 3
-alignment = 1
 
-[node name="RightSide" type="VBoxContainer" parent="HBoxContainer"]
-layout_mode = 2
+[node name="Note1" type="ColorRect" parent="NoteContainer/LeftSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_right = 85.0
+offset_bottom = 30.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note2" type="ColorRect" parent="NoteContainer/LeftSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 85.0
+offset_bottom = 80.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note3" type="ColorRect" parent="NoteContainer/LeftSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 100.0
+offset_right = 85.0
+offset_bottom = 130.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note4" type="ColorRect" parent="NoteContainer/LeftSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 150.0
+offset_right = 85.0
+offset_bottom = 180.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="RightSide" type="Control" parent="NoteContainer"]
+anchors_preset = 0
+offset_left = 95.0
+offset_right = 180.0
+offset_bottom = 180.0
 size_flags_horizontal = 3
-alignment = 1
+
+[node name="Note1" type="ColorRect" parent="NoteContainer/RightSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_right = 85.0
+offset_bottom = 30.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note2" type="ColorRect" parent="NoteContainer/RightSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 85.0
+offset_bottom = 80.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note3" type="ColorRect" parent="NoteContainer/RightSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 100.0
+offset_right = 85.0
+offset_bottom = 130.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Note4" type="ColorRect" parent="NoteContainer/RightSide"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 0
+offset_top = 150.0
+offset_right = 85.0
+offset_bottom = 180.0
+color = Color(1, 1, 1, 0.39215687)

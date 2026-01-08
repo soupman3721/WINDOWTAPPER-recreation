@@ -2,7 +2,6 @@ extends EventableWindow
 
 func _ready() -> void:
 	super()
-	print(chart)
 	var offsets: Array[Vector2i] = [
 		Vector2i(-10, 0),
 		Vector2i(0, 10),

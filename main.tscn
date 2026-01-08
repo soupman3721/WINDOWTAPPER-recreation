@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn7fkfa4xrltx"]
+[gd_scene load_steps=11 format=3 uid="uid://cn7fkfa4xrltx"]
 
 [ext_resource type="Script" uid="uid://dp64bpwinx6iw" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cpgsk4y46oioh" path="res://icon.png" id="1_iqhi8"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://d0ewuvui7qbxc" path="res://CoolWindows/lPurple.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://1f5l0o1vpaxx" path="res://CoolWindows/cYellow.tscn" id="4_kek77"]
 [ext_resource type="PackedScene" uid="uid://bf5snfvnhplvh" path="res://CoolWindows/dDarkYellow.tscn" id="5_4c57u"]
+[ext_resource type="PackedScene" uid="uid://lmy8trn4hkyw" path="res://CoolWindows/eGreen.tscn" id="7_kek77"]
+[ext_resource type="PackedScene" uid="uid://bms1ventlo0fw" path="res://CoolWindows/fGreen.tscn" id="8_4c57u"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h2yge")
@@ -28,11 +30,19 @@ chart_name = "orange"
 
 [node name="Yellow" parent="Windows" instance=ExtResource("4_kek77")]
 visible = false
-stop_chart_execution = true
+chart_name = "yellow"
 
 [node name="DarkYellow" parent="Windows" instance=ExtResource("5_4c57u")]
 visible = false
-stop_chart_execution = true
+chart_name = "dark_yellow"
+
+[node name="Green" parent="Windows" instance=ExtResource("7_kek77")]
+visible = false
+chart_name = "green"
+
+[node name="Green2" parent="Windows" instance=ExtResource("8_4c57u")]
+visible = false
+chart_name = "fgreen"
 
 [node name="Purple" parent="Windows" instance=ExtResource("3_h2yge")]
 position = Vector2i(720, 480)
