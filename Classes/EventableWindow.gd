@@ -49,6 +49,9 @@ var events: Dictionary[String, Callable] = {}
 var previous_event: String
 var current_event: String
 
+var current_step: int
+var current_section: int
+
 func set_event(ev_name: String, ev_callback: Callable):
 	events.set(ev_name, ev_callback)
 
@@ -68,6 +71,9 @@ func execute_event(ev_name: String):
 func _on_step_hit(step: int, section: int):
 	if stop_chart_execution: return
 	if !is_node_ready(): await ready
+	
+	current_step = step
+	current_section = section
 	
 	if chart["sections"][section] == -2:
 		current_event = "."

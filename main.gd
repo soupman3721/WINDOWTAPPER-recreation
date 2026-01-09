@@ -10,6 +10,9 @@ var step: int = 0:
 		@warning_ignore("integer_division")
 		section = int(value) / 16
 		step_hit.emit(step, section)
+		
+		$Debug/StepLabel.text = str(step)
+		$Debug/SectionLabel.text = str(section)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if !event.is_pressed(): return
@@ -30,3 +33,12 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	step = $Wavetapper.get_playback_position() / (0.25 / ($Wavetapper.stream.bpm / 60))
+	if $Wavetapper.playing:
+		$Debug/SongPosition.value = $Wavetapper.get_playback_position() / $Wavetapper.stream.get_length()
+
+func _on_song_position_drag_started() -> void:
+	$Wavetapper.stream_paused = true
+
+func _on_song_position_drag_ended(_value_changed: bool) -> void:
+	$Wavetapper.stream_paused = false
+	$Wavetapper.seek($Debug/SongPosition.value * $Wavetapper.stream.get_length())

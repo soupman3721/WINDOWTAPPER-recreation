@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn7fkfa4xrltx"]
+[gd_scene load_steps=13 format=3 uid="uid://cn7fkfa4xrltx"]
 
 [ext_resource type="Script" uid="uid://dp64bpwinx6iw" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cpgsk4y46oioh" path="res://icon.png" id="1_iqhi8"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bf5snfvnhplvh" path="res://CoolWindows/dLime.tscn" id="5_4c57u"]
 [ext_resource type="PackedScene" uid="uid://lmy8trn4hkyw" path="res://CoolWindows/eGreen.tscn" id="7_kek77"]
 [ext_resource type="PackedScene" uid="uid://bms1ventlo0fw" path="res://CoolWindows/fGreen.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://ew481o45cri1" path="res://CoolWindows/gGreen.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://mhxe37cplb53" path="res://CoolWindows/hAqua.tscn" id="10_dg77c"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_h2yge")
@@ -32,9 +34,9 @@ chart_name = "orange"
 visible = false
 chart_name = "yellow"
 
-[node name="DarkYellow" parent="Windows" instance=ExtResource("5_4c57u")]
+[node name="Lime" parent="Windows" instance=ExtResource("5_4c57u")]
 visible = false
-chart_name = "dark_yellow"
+chart_name = "lime"
 
 [node name="Green" parent="Windows" instance=ExtResource("7_kek77")]
 visible = false
@@ -43,6 +45,14 @@ chart_name = "green"
 [node name="Green2" parent="Windows" instance=ExtResource("8_4c57u")]
 visible = false
 chart_name = "fgreen"
+
+[node name="Green3" parent="Windows" instance=ExtResource("9_efxa6")]
+visible = false
+chart_name = "gGreen"
+
+[node name="Aqua" parent="Windows" instance=ExtResource("10_dg77c")]
+visible = false
+chart_name = "aqua"
 
 [node name="Purple" parent="Windows" instance=ExtResource("3_h2yge")]
 position = Vector2i(720, 480)
@@ -135,3 +145,34 @@ color = Color(0.8235294, 0.13725491, 0.49411765, 1)
 position = Vector2(930, 613)
 texture = ExtResource("1_iqhi8")
 centered = false
+
+[node name="Debug" type="Window" parent="."]
+oversampling_override = 1.0
+position = Vector2i(7, 31)
+size = Vector2i(550, 100)
+
+[node name="Label" type="Label" parent="Debug"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "dubeg"
+
+[node name="StepLabel" type="Label" parent="Debug"]
+offset_top = 35.0
+offset_right = 40.0
+offset_bottom = 58.0
+
+[node name="SectionLabel" type="Label" parent="Debug"]
+offset_left = 53.0
+offset_top = 35.0
+offset_right = 93.0
+offset_bottom = 58.0
+
+[node name="SongPosition" type="HSlider" parent="Debug"]
+offset_top = 69.0
+offset_right = 550.0
+offset_bottom = 100.0
+max_value = 1.0
+step = 0.0
+
+[connection signal="drag_ended" from="Debug/SongPosition" to="." method="_on_song_position_drag_ended"]
+[connection signal="drag_started" from="Debug/SongPosition" to="." method="_on_song_position_drag_started"]
