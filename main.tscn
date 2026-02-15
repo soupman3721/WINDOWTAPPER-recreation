@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn7fkfa4xrltx"]
+[gd_scene format=3 uid="uid://cn7fkfa4xrltx"]
 
 [ext_resource type="Script" uid="uid://dp64bpwinx6iw" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cpgsk4y46oioh" path="res://icon.png" id="1_iqhi8"]
@@ -12,167 +12,181 @@
 [ext_resource type="PackedScene" uid="uid://bms1ventlo0fw" path="res://CoolWindows/fGreen.tscn" id="8_4c57u"]
 [ext_resource type="PackedScene" uid="uid://ew481o45cri1" path="res://CoolWindows/gGreen.tscn" id="9_efxa6"]
 [ext_resource type="PackedScene" uid="uid://mhxe37cplb53" path="res://CoolWindows/hAqua.tscn" id="10_dg77c"]
+[ext_resource type="PackedScene" uid="uid://b4an8n4wvbbge" path="res://CoolWindows/iLightBlue.tscn" id="11_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://botfqdjv5inaa" path="res://CoolWindows/jBlue.tscn" id="12_w48qg"]
+[ext_resource type="PackedScene" uid="uid://ts26bigu68kt" path="res://CoolWindows/kNavy.tscn" id="13_vivmo"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=505092794]
 script = ExtResource("1_h2yge")
 
-[node name="Wavetapper" type="AudioStreamPlayer" parent="."]
+[node name="Wavetapper" type="AudioStreamPlayer" parent="." unique_id=2099171044]
 stream = ExtResource("2_5vw27")
 autoplay = true
 
-[node name="Windows" type="Node" parent="."]
+[node name="Windows" type="Node" parent="." unique_id=1152949183]
 
-[node name="Red" parent="Windows" instance=ExtResource("2_272bh")]
+[node name="Red" parent="Windows" unique_id=1107990376 instance=ExtResource("2_272bh")]
 visible = false
 chart_name = "red"
 
-[node name="Orange" parent="Windows" instance=ExtResource("3_5vw27")]
+[node name="Orange" parent="Windows" unique_id=351688090 instance=ExtResource("3_5vw27")]
 visible = false
 chart_name = "orange"
 
-[node name="Yellow" parent="Windows" instance=ExtResource("4_kek77")]
+[node name="Yellow" parent="Windows" unique_id=1604114568 instance=ExtResource("4_kek77")]
 visible = false
 chart_name = "yellow"
 
-[node name="Lime" parent="Windows" instance=ExtResource("5_4c57u")]
+[node name="Lime" parent="Windows" unique_id=206622747 instance=ExtResource("5_4c57u")]
 visible = false
 chart_name = "lime"
 
-[node name="Green" parent="Windows" instance=ExtResource("7_kek77")]
+[node name="Green" parent="Windows" unique_id=1880394893 instance=ExtResource("7_kek77")]
 visible = false
 chart_name = "green"
 
-[node name="Green2" parent="Windows" instance=ExtResource("8_4c57u")]
+[node name="Green2" parent="Windows" unique_id=318036783 instance=ExtResource("8_4c57u")]
 visible = false
 chart_name = "fgreen"
 
-[node name="Green3" parent="Windows" instance=ExtResource("9_efxa6")]
+[node name="Green3" parent="Windows" unique_id=1714367116 instance=ExtResource("9_efxa6")]
 visible = false
 chart_name = "gGreen"
 
-[node name="Aqua" parent="Windows" instance=ExtResource("10_dg77c")]
+[node name="Aqua" parent="Windows" unique_id=627557115 instance=ExtResource("10_dg77c")]
 visible = false
 chart_name = "aqua"
 
-[node name="Purple" parent="Windows" instance=ExtResource("3_h2yge")]
+[node name="LightBlue" parent="Windows" unique_id=698224335 instance=ExtResource("11_ycdy4")]
+visible = false
+chart_name = "light_blue"
+
+[node name="Blue" parent="Windows" unique_id=2088880080 instance=ExtResource("12_w48qg")]
+visible = false
+
+[node name="Navy" parent="Windows" unique_id=1322809345 instance=ExtResource("13_vivmo")]
+visible = false
+
+[node name="Purple" parent="Windows" unique_id=134680558 instance=ExtResource("3_h2yge")]
 position = Vector2i(720, 480)
 visible = false
-stop_chart_execution = true
+chart_name = "purple"
 
-[node name="Positions" type="HFlowContainer" parent="."]
+[node name="Positions" type="HFlowContainer" parent="." unique_id=1889936229]
 offset_right = 920.0
 offset_bottom = 920.0
 theme_override_constants/h_separation = 40
 theme_override_constants/v_separation = 40
 alignment = 1
 
-[node name="Red" type="ColorRect" parent="Positions"]
+[node name="Red" type="ColorRect" parent="Positions" unique_id=184916353]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.92156863, 0.36078432, 0.3647059, 1)
 
-[node name="Orange" type="ColorRect" parent="Positions"]
+[node name="Orange" type="ColorRect" parent="Positions" unique_id=1376706906]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.9490196, 0.5019608, 0.3254902, 1)
 
-[node name="Yellow" type="ColorRect" parent="Positions"]
+[node name="Yellow" type="ColorRect" parent="Positions" unique_id=47695757]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.9843137, 0.88235295, 0.2509804, 1)
 
-[node name="DarkYellow" type="ColorRect" parent="Positions"]
+[node name="DarkYellow" type="ColorRect" parent="Positions" unique_id=1433868476]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.7058824, 0.84313726, 0.14117648, 1)
 
-[node name="Control5" type="ColorRect" parent="Positions"]
+[node name="Control5" type="ColorRect" parent="Positions" unique_id=741240023]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.33333334, 0.7607843, 0.09803922, 1)
 
-[node name="Control6" type="ColorRect" parent="Positions"]
+[node name="Control6" type="ColorRect" parent="Positions" unique_id=508930501]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.16078432, 0.7019608, 0.34509805, 1)
 
-[node name="Control7" type="ColorRect" parent="Positions"]
+[node name="Control7" type="ColorRect" parent="Positions" unique_id=2028052135]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.16078432, 0.7019608, 0.5254902, 1)
 
-[node name="Control8" type="ColorRect" parent="Positions"]
+[node name="Control8" type="ColorRect" parent="Positions" unique_id=1971604964]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.15686275, 0.7019608, 0.6117647, 1)
 
-[node name="Control9" type="ColorRect" parent="Positions"]
+[node name="Control9" type="ColorRect" parent="Positions" unique_id=1453633425]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.14901961, 0.7058824, 0.85490197, 1)
 
-[node name="Control10" type="ColorRect" parent="Positions"]
+[node name="Control10" type="ColorRect" parent="Positions" unique_id=366615259]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-color = Color(0.11764706, 0.43137255, 0.80784315, 1)
+color = Color(0.11764706, 0.43137255, 0.8039216, 1)
 
-[node name="Control11" type="ColorRect" parent="Positions"]
+[node name="Control11" type="ColorRect" parent="Positions" unique_id=1459868251]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-color = Color(0.21568628, 0.12156863, 0.7607843, 1)
+color = Color(0.21568628, 0.11764706, 0.7647059, 1)
 
-[node name="Purple" type="ColorRect" parent="Positions"]
+[node name="Purple" type="ColorRect" parent="Positions" unique_id=1000135892]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.5058824, 0.1254902, 0.88235295, 1)
 
-[node name="Control13" type="ColorRect" parent="Positions"]
+[node name="Control13" type="ColorRect" parent="Positions" unique_id=2123845283]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.7294118, 0.19215687, 0.8862745, 1)
 
-[node name="Control14" type="ColorRect" parent="Positions"]
+[node name="Control14" type="ColorRect" parent="Positions" unique_id=1825140670]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.85882354, 0.20784314, 0.65882355, 1)
 
-[node name="Control15" type="ColorRect" parent="Positions"]
+[node name="Control15" type="ColorRect" parent="Positions" unique_id=565772196]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 color = Color(0.8235294, 0.13725491, 0.49411765, 1)
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=572895450]
 position = Vector2(930, 613)
 texture = ExtResource("1_iqhi8")
 centered = false
 
-[node name="Debug" type="Window" parent="."]
+[node name="Debug" type="Window" parent="." unique_id=974947218]
 oversampling_override = 1.0
-position = Vector2i(7, 31)
+position = Vector2i(7, 36)
 size = Vector2i(550, 100)
 
-[node name="Label" type="Label" parent="Debug"]
+[node name="Label" type="Label" parent="Debug" unique_id=692071748]
 offset_right = 40.0
 offset_bottom = 23.0
 text = "dubeg"
 
-[node name="StepLabel" type="Label" parent="Debug"]
+[node name="StepLabel" type="Label" parent="Debug" unique_id=1062330799]
 offset_top = 35.0
 offset_right = 40.0
 offset_bottom = 58.0
 
-[node name="SectionLabel" type="Label" parent="Debug"]
+[node name="SectionLabel" type="Label" parent="Debug" unique_id=1210464053]
 offset_left = 53.0
 offset_top = 35.0
 offset_right = 93.0
 offset_bottom = 58.0
 
-[node name="SongPosition" type="HSlider" parent="Debug"]
+[node name="SongPosition" type="HSlider" parent="Debug" unique_id=1719820149]
 offset_top = 69.0
 offset_right = 550.0
 offset_bottom = 100.0
 max_value = 1.0
 step = 0.0
 
+[connection signal="step_hit" from="." to="." method="_on_step_hit"]
 [connection signal="drag_ended" from="Debug/SongPosition" to="." method="_on_song_position_drag_ended"]
 [connection signal="drag_started" from="Debug/SongPosition" to="." method="_on_song_position_drag_started"]

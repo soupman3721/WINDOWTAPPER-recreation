@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0ewuvui7qbxc"]
+[gd_scene format=3 uid="uid://d0ewuvui7qbxc"]
 
 [ext_resource type="Script" uid="uid://2kbowhnliqhh" path="res://Scripts/l_purple.gd" id="1_ngddb"]
 
-[node name="Purple" type="Window"]
+[node name="Purple" type="Window" unique_id=1767756104]
 oversampling_override = 1.0
 position = Vector2i(0, 36)
 size = Vector2i(200, 200)
@@ -12,14 +12,14 @@ maximize_disabled = true
 script = ExtResource("1_ngddb")
 metadata/_custom_type_script = "uid://b5vuchr8iiva0"
 
-[node name="BG" type="ColorRect" parent="."]
+[node name="BG" type="ColorRect" parent="." unique_id=1341613191]
 offset_left = -28.0
 offset_top = -9.0
 offset_right = 231.0
 offset_bottom = 216.0
 color = Color(0.50980395, 0.11764706, 0.9019608, 1)
 
-[node name="NumberButtons" type="HFlowContainer" parent="."]
+[node name="NumberButtons" type="HFlowContainer" parent="." unique_id=290256731]
 offset_top = 15.0
 offset_right = 200.0
 offset_bottom = 200.0
@@ -28,47 +28,96 @@ theme_override_constants/v_separation = 10
 alignment = 1
 last_wrap_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect" type="ColorRect" parent="NumberButtons" unique_id=1776601488]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect2" type="ColorRect" parent="NumberButtons" unique_id=1763600934]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect3" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect3" type="ColorRect" parent="NumberButtons" unique_id=1762160507]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect4" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect4" type="ColorRect" parent="NumberButtons" unique_id=958997402]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect5" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect5" type="ColorRect" parent="NumberButtons" unique_id=2066218223]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect6" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect6" type="ColorRect" parent="NumberButtons" unique_id=889759901]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect7" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect7" type="ColorRect" parent="NumberButtons" unique_id=1761198631]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect8" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect8" type="ColorRect" parent="NumberButtons" unique_id=1124800913]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
 
-[node name="ColorRect9" type="ColorRect" parent="NumberButtons"]
+[node name="ColorRect9" type="ColorRect" parent="NumberButtons" unique_id=1875524710]
+modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 color = Color(1, 1, 1, 0.39215687)
+metadata/_edit_lock_ = true
+
+[node name="Symbols" type="Control" parent="." unique_id=954561815]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dailing" type="Polygon2D" parent="Symbols" unique_id=2034195060]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(0, -80, 0, -40, -40, 0, 0, 40, 40, 0, 0, -40, 0, -80, 80, 0, 0, 80, -80, 0)
+metadata/_edit_lock_ = true
+
+[node name="Ringing" type="Polygon2D" parent="Symbols" unique_id=1127654438]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(-32, 64, 64, 64, 64, -32, 38, -6, -19, -64, -64, -20, -6, 38)
+metadata/_edit_lock_ = true
+
+[node name="Busy" type="Polygon2D" parent="Symbols" unique_id=207947247]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(50, 75, 75, 50, 25, 0, 75, -50, 50, -75, 0, -25, -50, -75, -75, -50, -25, 0, -75, 50, -50, 75, 0, 25)
+metadata/_edit_lock_ = true
+
+[node name="Exclamation" type="Polygon2D" parent="Symbols" unique_id=1545534142]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)

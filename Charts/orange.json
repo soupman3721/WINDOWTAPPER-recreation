@@ -1,7 +1,10 @@
 {
 	"section_charts": [
 		"..zz.zzz..zz.zzz",
-		"..xx.xxz.czzczxx"
+		"..xx.xxz.czzczxx",
+		"..22.221.3113211",
+		"..ww.wwq.eqqewqq",
+		"..ww.wwq.daadsaa"
 	],
 	"sections": [
 		-2,
@@ -14,6 +17,12 @@
 		-2,-2,-2,-2,
 		
 		1, 1, 1, 1,
-		1, 1, 1, 1
+		1, 1, 1, 1,
+		
+		1, 1, 1, 1,
+		1, 1, 1, 1,
+		
+		-2, 1, 2, 3,
+		4, 1, 2, 3,
 	]
 }

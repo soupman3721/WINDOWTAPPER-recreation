@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b4an8n4wvbbge"]
+
+[ext_resource type="Script" uid="uid://cucti8ppaedqh" path="res://Scripts/i_light_blue.gd" id="1_7w5y4"]
+
+[node name="LightBlue" type="Window" unique_id=2088880080]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+script = ExtResource("1_7w5y4")
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1750212455]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 204.0
+offset_bottom = 205.0
+color = Color(0.14901961, 0.7058824, 0.85490197, 1)
+metadata/_edit_lock_ = true
+
+[node name="Shapes" type="Node2D" parent="." unique_id=939056648]
+
+[node name="Triangle" type="Polygon2D" parent="Shapes" unique_id=285750636]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 116)
+scale = Vector2(1.15, 1.15)
+color = Color(1, 1, 1, 0.39215687)
+antialiased = true
+polygon = PackedVector2Array(0, -60, -51.961517, 30, 51.961525, 29.999992)
+
+[node name="Square" type="ColorRect" parent="Shapes" unique_id=770312491]
+modulate = Color(1, 1, 1, 0)
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 160.0
+offset_bottom = 160.0
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="Pentagon" type="Polygon2D" parent="Shapes" unique_id=1892611925]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 107)
+color = Color(1, 1, 1, 0.39215687)
+antialiased = true
+polygon = PackedVector2Array(0, -75, -71.32925, -23.176277, -44.083878, 60.676285, 44.08388, 60.676285, 71.32925, -23.176262)
+uv = PackedVector2Array(-259, -46.5, -353.1153, -60.267838)
+
+[node name="Hexagon" type="Polygon2D" parent="Shapes" unique_id=616853738]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+color = Color(1, 1, 1, 0.39215687)
+antialiased = true
+polygon = PackedVector2Array(85, 0, 42.499992, 73.61215, -42.499992, 73.61216, -85, 0, -42.500004, -73.61216, 42.499992, -73.61216)
+
+[node name="Heptagon" type="Polygon2D" parent="Shapes" unique_id=129102595]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 102)
+color = Color(1, 1, 1, 0.39215687)
+antialiased = true
+polygon = PackedVector2Array(0, -80, -62.521637, -49.910362, -78.01195, 17.723885, -34.81848, 72.025505, 34.566864, 72.14661, 77.9496, 17.996094, 62.69547, -49.69184)

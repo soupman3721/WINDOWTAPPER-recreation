@@ -1,38 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ew481o45cri1"]
+[gd_scene format=3 uid="uid://ew481o45cri1"]
 
 [ext_resource type="Script" uid="uid://bemdlg5xawhk2" path="res://Scripts/g_green.gd" id="1_shybm"]
-
-[sub_resource type="Animation" id="Animation_a56vc"]
-resource_name = "k"
-length = 0.26
-step = 0.0371
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bars:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.037037037, 0.074074075, 0.11111111, 0.14814815, 0.18518518, 0.22222222, 0.25925925),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Color(1, 1, 1, 0.23529412), Color(1, 1, 1, 0), Color(1, 1, 1, 0.43137255), Color(1, 1, 1, 0), Color(1, 1, 1, 0.60784316), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_glhjd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bars:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_shybm"]
 resource_name = "K"
@@ -51,6 +19,38 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0.23529412), Color(1, 1, 1, 0), Color(1, 1, 1, 0.43137255), Color(1, 1, 1, 0), Color(1, 1, 1, 0.60784316), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_glhjd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bars:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a56vc"]
+resource_name = "k"
+length = 0.26
+step = 0.0371
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bars:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.037037037, 0.074074075, 0.11111111, 0.14814815, 0.18518518, 0.22222222, 0.25925925),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0.23529412), Color(1, 1, 1, 0), Color(1, 1, 1, 0.43137255), Color(1, 1, 1, 0), Color(1, 1, 1, 0.60784316), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_708e7"]
 _data = {
 &"K": SubResource("Animation_shybm"),
@@ -58,7 +58,7 @@ _data = {
 &"k": SubResource("Animation_a56vc")
 }
 
-[node name="Green" type="Window"]
+[node name="Green" type="Window" unique_id=93745045]
 oversampling_override = 1.0
 position = Vector2i(0, 36)
 size = Vector2i(200, 200)
@@ -67,21 +67,21 @@ always_on_top = true
 script = ExtResource("1_shybm")
 metadata/_custom_type_script = "uid://b5vuchr8iiva0"
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1730984655]
 offset_left = -5.0
 offset_top = -5.0
 offset_right = 204.0
 offset_bottom = 204.0
 color = Color(0.16078432, 0.7019608, 0.5254902, 1)
 
-[node name="Bars" type="Control" parent="."]
+[node name="Bars" type="Control" parent="." unique_id=580690380]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect2" type="ColorRect" parent="Bars"]
+[node name="ColorRect2" type="ColorRect" parent="Bars" unique_id=704664471]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 20.0
@@ -89,7 +89,7 @@ offset_right = 175.0
 offset_bottom = 65.0
 color = Color(1, 1, 1, 0.39215687)
 
-[node name="ColorRect3" type="ColorRect" parent="Bars"]
+[node name="ColorRect3" type="ColorRect" parent="Bars" unique_id=495559502]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 135.0
@@ -97,7 +97,7 @@ offset_right = 175.0
 offset_bottom = 180.0
 color = Color(1, 1, 1, 0.39215687)
 
-[node name="Square" type="ColorRect" parent="."]
+[node name="Square" type="ColorRect" parent="." unique_id=754701142]
 visible = false
 offset_left = 81.0
 offset_top = 80.0
@@ -105,7 +105,5 @@ offset_right = 121.0
 offset_bottom = 120.0
 color = Color(1, 1, 1, 0.39215687)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_708e7")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2036435165]
+libraries/ = SubResource("AnimationLibrary_708e7")

@@ -21,9 +21,11 @@ color = Color(0.16078432, 0.7019608, 0.34509805, 1)
 [node name="Left" type="Polygon2D" parent="."]
 position = Vector2(5, 70)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(0, 0, 0, 125, 125, 125)
 
 [node name="Right" type="Polygon2D" parent="."]
 position = Vector2(195, 5)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(0, 0, 0, 125, -125, 0)

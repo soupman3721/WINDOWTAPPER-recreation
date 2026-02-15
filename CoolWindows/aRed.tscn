@@ -23,19 +23,23 @@ color = Color(0.92156863, 0.36078432, 0.3647059, 1)
 [node name="Left" type="Polygon2D" parent="Directions"]
 modulate = Color(1, 1, 1, 0)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(5, 10, 5, 190, 95, 100)
 
 [node name="Down" type="Polygon2D" parent="Directions"]
 modulate = Color(1, 1, 1, 0)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(10, 195, 190, 195, 100, 105)
 
 [node name="Up" type="Polygon2D" parent="Directions"]
 modulate = Color(1, 1, 1, 0)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(10, 5, 190, 5, 100, 95)
 
 [node name="Right" type="Polygon2D" parent="Directions"]
 modulate = Color(1, 1, 1, 0)
 color = Color(1, 1, 1, 0.39215687)
+antialiased = true
 polygon = PackedVector2Array(195, 10, 195, 190, 105, 100)
