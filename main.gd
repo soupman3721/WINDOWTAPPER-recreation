@@ -45,3 +45,6 @@ func _on_song_position_drag_ended(_value_changed: bool) -> void:
 
 #func _on_step_hit(_step: int, _section: int) -> void:
 	#print(Engine.get_frames_per_second())
+
+func _on_wavetapper_finished() -> void:
+	get_tree().quit()

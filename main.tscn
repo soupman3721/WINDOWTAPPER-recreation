@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ts26bigu68kt" path="res://CoolWindows/kNavy.tscn" id="13_vivmo"]
 [ext_resource type="PackedScene" uid="uid://qid31xrad8s6" path="res://CoolWindows/mMagenta.tscn" id="15_2cqfq"]
 [ext_resource type="PackedScene" uid="uid://x5b0w1w1lav5" path="res://CoolWindows/nPink.tscn" id="16_yaehf"]
+[ext_resource type="PackedScene" uid="uid://dqwry0wdtue77" path="res://CoolWindows/oRuby.tscn" id="17_074og"]
 
 [node name="Main" type="Node" unique_id=505092794]
 script = ExtResource("1_h2yge")
@@ -29,45 +30,56 @@ autoplay = true
 
 [node name="Red" parent="Windows" unique_id=1107990376 instance=ExtResource("2_272bh")]
 visible = false
+maximize_disabled = true
 chart_name = "red"
 
 [node name="Orange" parent="Windows" unique_id=351688090 instance=ExtResource("3_5vw27")]
 visible = false
+maximize_disabled = true
 chart_name = "orange"
 
 [node name="Yellow" parent="Windows" unique_id=1604114568 instance=ExtResource("4_kek77")]
 visible = false
+maximize_disabled = true
 chart_name = "yellow"
 
 [node name="Lime" parent="Windows" unique_id=206622747 instance=ExtResource("5_4c57u")]
 visible = false
+maximize_disabled = true
 chart_name = "lime"
 
 [node name="Green" parent="Windows" unique_id=1880394893 instance=ExtResource("7_kek77")]
 visible = false
+maximize_disabled = true
 chart_name = "green"
 
 [node name="Green2" parent="Windows" unique_id=318036783 instance=ExtResource("8_4c57u")]
 visible = false
+maximize_disabled = true
 chart_name = "fgreen"
 
 [node name="Green3" parent="Windows" unique_id=1714367116 instance=ExtResource("9_efxa6")]
 visible = false
+maximize_disabled = true
 chart_name = "gGreen"
 
 [node name="Aqua" parent="Windows" unique_id=627557115 instance=ExtResource("10_dg77c")]
 visible = false
+maximize_disabled = true
 chart_name = "aqua"
 
 [node name="LightBlue" parent="Windows" unique_id=698224335 instance=ExtResource("11_ycdy4")]
 visible = false
+maximize_disabled = true
 chart_name = "light_blue"
 
 [node name="Blue" parent="Windows" unique_id=2088880080 instance=ExtResource("12_w48qg")]
 visible = false
+maximize_disabled = true
 
 [node name="Navy" parent="Windows" unique_id=1322809345 instance=ExtResource("13_vivmo")]
 visible = false
+maximize_disabled = true
 
 [node name="Purple" parent="Windows" unique_id=134680558 instance=ExtResource("3_h2yge")]
 position = Vector2i(720, 480)
@@ -78,6 +90,9 @@ chart_name = "purple"
 visible = false
 
 [node name="Pink" parent="Windows" unique_id=1679073707 instance=ExtResource("16_yaehf")]
+visible = false
+
+[node name="Ruby" parent="Windows" unique_id=2030993274 instance=ExtResource("17_074og")]
 visible = false
 
 [node name="Positions" type="HFlowContainer" parent="." unique_id=1889936229]
@@ -197,5 +212,6 @@ max_value = 1.0
 step = 0.0
 
 [connection signal="step_hit" from="." to="." method="_on_step_hit"]
+[connection signal="finished" from="Wavetapper" to="." method="_on_wavetapper_finished"]
 [connection signal="drag_ended" from="Debug/SongPosition" to="." method="_on_song_position_drag_ended"]
 [connection signal="drag_started" from="Debug/SongPosition" to="." method="_on_song_position_drag_started"]

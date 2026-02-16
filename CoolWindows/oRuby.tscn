@@ -410,6 +410,246 @@ tracks/0/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_6rw3u"]
+resource_name = "7"
+length = 4.0000124
+step = 0.125
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.125, 2.25, 2.375, 2.5, 2.75, 3, 3.25, 3.5, 3.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [17],
+"method": &"show_symbol"
+}, {
+"args": [5],
+"method": &"show_symbol"
+}, {
+"args": [5],
+"method": &"show_symbol"
+}, {
+"args": [14],
+"method": &"show_symbol"
+}, {
+"args": [11],
+"method": &"show_symbol"
+}, {
+"args": [3],
+"method": &"show_symbol"
+}, {
+"args": [3],
+"method": &"show_symbol"
+}, {
+"args": [3],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [18],
+"method": &"show_symbol"
+}, {
+"args": [9],
+"method": &"show_symbol"
+}, {
+"args": [7],
+"method": &"show_symbol"
+}, {
+"args": [7],
+"method": &"show_symbol"
+}, {
+"args": [7],
+"method": &"show_symbol"
+}, {
+"args": [7],
+"method": &"show_symbol"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_4fplh"]
+resource_name = "8"
+length = 4.0000124
+step = 0.125
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.625, 2.75, 2.875, 3, 3.25, 3.5, 3.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [15],
+"method": &"show_symbol"
+}, {
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [15],
+"method": &"show_symbol"
+}, {
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [12],
+"method": &"show_symbol"
+}, {
+"args": [0],
+"method": &"show_symbol"
+}, {
+"args": [9],
+"method": &"show_symbol"
+}, {
+"args": [6],
+"method": &"show_symbol"
+}, {
+"args": [6],
+"method": &"show_symbol"
+}, {
+"args": [6],
+"method": &"show_symbol"
+}, {
+"args": [6],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}, {
+"args": [5],
+"method": &"show_symbol"
+}, {
+"args": [8],
+"method": &"show_symbol"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_hvcdx"]
+resource_name = "9"
+length = 4.0000124
+step = 0.0625
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.5, 0.75, 0.875, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.375, 2.5, 2.75, 2.875, 3, 3.125, 3.25, 3.375, 3.5, 3.5625, 3.625, 3.6875, 3.75, 3.8125, 3.875, 3.9375),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [10],
+"method": &"show_symbol"
+}, {
+"args": [10],
+"method": &"show_symbol"
+}, {
+"args": [4],
+"method": &"show_symbol"
+}, {
+"args": [16],
+"method": &"show_symbol"
+}, {
+"args": [10],
+"method": &"show_symbol"
+}, {
+"args": [10],
+"method": &"show_symbol"
+}, {
+"args": [4],
+"method": &"show_symbol"
+}, {
+"args": [13],
+"method": &"show_symbol"
+}, {
+"args": [17],
+"method": &"show_symbol"
+}, {
+"args": [13],
+"method": &"show_symbol"
+}, {
+"args": [0],
+"method": &"show_symbol"
+}, {
+"args": [14],
+"method": &"show_symbol"
+}, {
+"args": [14],
+"method": &"show_symbol"
+}, {
+"args": [3],
+"method": &"show_symbol"
+}, {
+"args": [13],
+"method": &"show_symbol"
+}, {
+"args": [13],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}, {
+"args": [19],
+"method": &"show_symbol"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hqcet"]
 _data = {
 &"1": SubResource("Animation_6tgsd"),
@@ -417,7 +657,10 @@ _data = {
 &"3": SubResource("Animation_hqcet"),
 &"4": SubResource("Animation_wkbwu"),
 &"5": SubResource("Animation_t0wd8"),
-&"6": SubResource("Animation_i80ql")
+&"6": SubResource("Animation_i80ql"),
+&"7": SubResource("Animation_6rw3u"),
+&"8": SubResource("Animation_4fplh"),
+&"9": SubResource("Animation_hvcdx")
 }
 
 [node name="Ruby" type="Window" unique_id=1767756104]
@@ -428,6 +671,7 @@ unresizable = true
 always_on_top = true
 maximize_disabled = true
 script = ExtResource("1_ui5qq")
+chart_name = "ruby"
 metadata/_custom_type_script = "uid://b5vuchr8iiva0"
 
 [node name="BG" type="ColorRect" parent="." unique_id=1341613191]

@@ -89,6 +89,10 @@ func _on_step_hit(step: int, section: int):
 		if step == 12:
 			execute_event("\\")
 			previous_event = "\\"
+			return
+		current_event = "."
+		dot_event()
+		previous_event = "."
 		return
 	
 	current_event = chart["section_charts"][chart["sections"][section]][step]
