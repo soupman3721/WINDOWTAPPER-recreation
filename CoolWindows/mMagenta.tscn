@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://qid31xrad8s6"]
+
+[ext_resource type="Script" uid="uid://dip8aqpr7p7b6" path="res://Scripts/m_magenta.gd" id="1_v0voy"]
+
+[node name="Magenta" type="Window" unique_id=1767756104]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+maximize_disabled = true
+script = ExtResource("1_v0voy")
+chart_name = "magenta"
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="BG" type="ColorRect" parent="." unique_id=1341613191]
+offset_left = -28.0
+offset_top = -9.0
+offset_right = 231.0
+offset_bottom = 216.0
+color = Color(0.7254902, 0.19607843, 0.88235295, 1)
+metadata/_edit_lock_ = true
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1263614759]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rect" type="ColorRect" parent="Center" unique_id=245616346]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="RectL" type="Control" parent="Center/Rect" unique_id=842945468]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RectM" type="Control" parent="Center/Rect" unique_id=837122218]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RectR" type="Control" parent="Center/Rect" unique_id=1897576305]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

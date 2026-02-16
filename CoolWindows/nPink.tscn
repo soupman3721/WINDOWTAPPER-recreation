@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://x5b0w1w1lav5"]
+
+[ext_resource type="Script" uid="uid://dip8aqpr7p7b6" path="res://Scripts/m_magenta.gd" id="1_q3qvo"]
+
+[node name="Pink" type="Window" unique_id=1767756104]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(200, 200)
+unresizable = true
+always_on_top = true
+maximize_disabled = true
+script = ExtResource("1_q3qvo")
+chart_name = "pink"
+metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="BG" type="ColorRect" parent="." unique_id=1341613191]
+offset_left = -28.0
+offset_top = -9.0
+offset_right = 231.0
+offset_bottom = 216.0
+color = Color(0.8627451, 0.19607843, 0.6666667, 1)
+metadata/_edit_lock_ = true
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1263614759]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rect" type="HBoxContainer" parent="Center" unique_id=482181984]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="RectL" type="ColorRect" parent="Center/Rect" unique_id=604662426]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="RectM" type="ColorRect" parent="Center/Rect" unique_id=1342937661]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+color = Color(1, 1, 1, 0.39215687)
+
+[node name="RectR" type="ColorRect" parent="Center/Rect" unique_id=1808093948]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+color = Color(1, 1, 1, 0.39215687)

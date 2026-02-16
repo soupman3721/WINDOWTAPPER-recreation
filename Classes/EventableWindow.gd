@@ -83,8 +83,12 @@ func _on_step_hit(step: int, section: int):
 	if chart["sections"][section] == -1:
 		if step == 0:
 			execute_event("V")
-		
-		previous_event = "V"
+			previous_event = "V"
+		return
+	if chart["sections"][section] == -3:
+		if step == 12:
+			execute_event("\\")
+			previous_event = "\\"
 		return
 	
 	current_event = chart["section_charts"][chart["sections"][section]][step]
@@ -95,6 +99,10 @@ func _on_step_hit(step: int, section: int):
 
 func _ready() -> void:
 	set_event("V", func(): visible = !visible)
+	set_event("\\", func():
+		process_mode = Node.PROCESS_MODE_DISABLED
+		queue_free()
+	)
 	
 	var scene = get_tree().current_scene
 	if scene.has_signal("step_hit"):

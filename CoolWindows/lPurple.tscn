@@ -1,6 +1,45 @@
 [gd_scene format=3 uid="uid://d0ewuvui7qbxc"]
 
 [ext_resource type="Script" uid="uid://2kbowhnliqhh" path="res://Scripts/l_purple.gd" id="1_ngddb"]
+[ext_resource type="AudioStream" uid="uid://cn3h3dhkflm2k" path="res://untitled.ogg" id="2_ytq5f"]
+
+[sub_resource type="Animation" id="Animation_ytq5f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ngddb"]
+resource_name = "doNotHangup"
+length = 1.375
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.14999999, 0.16, 0.29, 0.35999998, 0.37, 0.63, 0.81, 0.84, 0.87, 0.94, 1.02, 1.22),
+"transitions": PackedFloat32Array(1, 1000000, 0.25, 1, 1000000, 0.25, 1, 1000000, 1000000, 0.46059367, 1000000, 0.5, 1),
+"update": 0,
+"values": [Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, -20), Vector2i(0, -5), Vector2i(0, -5), Vector2i(0, -30), Vector2i(0, 0), Vector2i(0, 0), Vector2i(0, -5), Vector2i(0, -10), Vector2i(0, -2), Vector2i(0, -10), Vector2i(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytq5f"]
+_data = {
+&"RESET": SubResource("Animation_ytq5f"),
+&"doNotHangup": SubResource("Animation_ngddb")
+}
 
 [node name="Purple" type="Window" unique_id=1767756104]
 oversampling_override = 1.0
@@ -11,6 +50,9 @@ always_on_top = true
 maximize_disabled = true
 script = ExtResource("1_ngddb")
 metadata/_custom_type_script = "uid://b5vuchr8iiva0"
+
+[node name="Untitled" type="AudioStreamPlayer" parent="." unique_id=987891696]
+stream = ExtResource("2_ytq5f")
 
 [node name="BG" type="ColorRect" parent="." unique_id=1341613191]
 offset_left = -28.0
@@ -121,3 +163,6 @@ metadata/_edit_lock_ = true
 [node name="Exclamation" type="Polygon2D" parent="Symbols" unique_id=1545534142]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(100, 100)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1943230844]
+libraries/ = SubResource("AnimationLibrary_ytq5f")

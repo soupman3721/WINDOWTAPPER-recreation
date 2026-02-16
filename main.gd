@@ -14,8 +14,9 @@ var step: int = 0:
 		$Debug/StepLabel.text = str(step)
 		$Debug/SectionLabel.text = str(section)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if !event.is_pressed(): return
+#func _unhandled_input(event: InputEvent) -> void:
+	#if !event.is_pressed(): return
+	#$Windows/Magenta.execute_event(event.as_text())
 
 func _ready() -> void:
 	step_hit.emit(step, section)
@@ -29,7 +30,7 @@ func _ready() -> void:
 		if (windows[i] is not EventableWindow): continue
 		windows[i].origin_position = $Positions.get_children()[i].global_position
 
-func _physics_process(_delta: float) -> void:
+func _process(_delta: float) -> void:
 	step = $Wavetapper.get_playback_position() / (0.25 / ($Wavetapper.stream.bpm / 60))
 	if $Wavetapper.playing:
 		$Debug/SongPosition.value = $Wavetapper.get_playback_position() / $Wavetapper.stream.get_length()
@@ -42,5 +43,5 @@ func _on_song_position_drag_ended(_value_changed: bool) -> void:
 	$Wavetapper.seek($Debug/SongPosition.value * $Wavetapper.stream.get_length())
 
 
-func _on_step_hit(_step: int, _section: int) -> void:
-	print(Engine.get_frames_per_second())
+#func _on_step_hit(_step: int, _section: int) -> void:
+	#print(Engine.get_frames_per_second())

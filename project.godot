@@ -29,6 +29,10 @@ window/size/transparent=true
 window/subwindows/embed_subwindows=false
 window/per_pixel_transparency/allowed=true
 
+[physics]
+
+common/enable_object_picking=false
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

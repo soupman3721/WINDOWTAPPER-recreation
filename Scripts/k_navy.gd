@@ -9,4 +9,5 @@ func _ready() -> void:
 	for ev in event_string:
 		set_event(ev, callback.bind(ev))
 	
+	set_event("R", $AnimationPlayer.play.bind("RESET"))
 	set_event("C", $AnimationPlayer.play.bind("fadeOut"))
