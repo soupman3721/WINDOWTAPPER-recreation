@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://dqwry0wdtue77"]
 
 [ext_resource type="Script" uid="uid://dbg6tamlvb8nx" path="res://Scripts/o_ruby.gd" id="1_ui5qq"]
+[ext_resource type="Texture2D" uid="uid://drnjmnb470yqw" path="res://RubyWindowSprites/0.png" id="2_hqcet"]
+[ext_resource type="Texture2D" uid="uid://16bvb02dmmul" path="res://RubyWindowSprites/1.png" id="3_wkbwu"]
+[ext_resource type="Texture2D" uid="uid://ohq3yq5otjll" path="res://RubyWindowSprites/2.png" id="4_nhmw0"]
+[ext_resource type="Texture2D" uid="uid://c5bxfkddy6h0v" path="res://RubyWindowSprites/3.png" id="5_1ey2t"]
+[ext_resource type="Texture2D" uid="uid://d0p66yelexvor" path="res://RubyWindowSprites/4.png" id="6_ifyd4"]
+[ext_resource type="Texture2D" uid="uid://d0gmvronkj5j2" path="res://RubyWindowSprites/5.png" id="7_qdwne"]
+[ext_resource type="Texture2D" uid="uid://qwu2nfmu7q5q" path="res://RubyWindowSprites/6.png" id="8_cgj18"]
+[ext_resource type="Texture2D" uid="uid://shjs1225snya" path="res://RubyWindowSprites/7.png" id="9_j11j7"]
+[ext_resource type="Texture2D" uid="uid://dlicdrsj33e5v" path="res://RubyWindowSprites/8.png" id="10_70g5x"]
+[ext_resource type="Texture2D" uid="uid://cfd184jvkx0l3" path="res://RubyWindowSprites/9.png" id="11_ifyd4"]
+[ext_resource type="Texture2D" uid="uid://dhyf8o0jxf8v" path="res://RubyWindowSprites/10.png" id="12_qdwne"]
+[ext_resource type="Texture2D" uid="uid://ri2lrnycidpl" path="res://RubyWindowSprites/11.png" id="13_qdwne"]
+[ext_resource type="Texture2D" uid="uid://gu2xed0aaqk0" path="res://RubyWindowSprites/12.png" id="14_cgj18"]
+[ext_resource type="Texture2D" uid="uid://dms5fyf67kxk4" path="res://RubyWindowSprites/14.png" id="15_70g5x"]
+[ext_resource type="Texture2D" uid="uid://d0lsrmapmqksy" path="res://RubyWindowSprites/13.png" id="15_j11j7"]
+[ext_resource type="Texture2D" uid="uid://duurjj2vcmefk" path="res://RubyWindowSprites/15.png" id="17_he1bx"]
+[ext_resource type="Texture2D" uid="uid://b5ovf4ci8tt8" path="res://RubyWindowSprites/16.png" id="18_iu5kr"]
+[ext_resource type="Texture2D" uid="uid://5grknj5h8xh1" path="res://RubyWindowSprites/17.png" id="19_0mteb"]
+[ext_resource type="Texture2D" uid="uid://cjr4b1odjbx3b" path="res://RubyWindowSprites/18.png" id="20_1aobd"]
+[ext_resource type="Texture2D" uid="uid://d1y4v01o3nq3v" path="res://RubyWindowSprites/19.png" id="21_wovnc"]
 
 [sub_resource type="Animation" id="Animation_6tgsd"]
 resource_name = "1"
@@ -663,6 +683,44 @@ _data = {
 &"9": SubResource("Animation_hvcdx")
 }
 
+[sub_resource type="Animation" id="Animation_nhmw0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Symbols:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1ey2t"]
+resource_name = "pulse"
+length = 0.15
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Symbols:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ifyd4"]
+_data = {
+&"RESET": SubResource("Animation_nhmw0"),
+&"pulse": SubResource("Animation_1ey2t")
+}
+
 [node name="Ruby" type="Window" unique_id=1767756104]
 oversampling_override = 1.0
 position = Vector2i(0, 36)
@@ -685,3 +743,90 @@ metadata/_edit_lock_ = true
 [node name="SequencePlayer" type="AnimationPlayer" parent="." unique_id=1141576071]
 libraries/ = SubResource("AnimationLibrary_hqcet")
 speed_scale = 1.867
+
+[node name="Symbols" type="Node2D" parent="." unique_id=1157301178]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(100, 100)
+
+[node name="0" type="Sprite2D" parent="Symbols" unique_id=1572122794]
+visible = false
+texture = ExtResource("2_hqcet")
+
+[node name="1" type="Sprite2D" parent="Symbols" unique_id=1665132551]
+visible = false
+texture = ExtResource("3_wkbwu")
+
+[node name="2" type="Sprite2D" parent="Symbols" unique_id=670451921]
+visible = false
+texture = ExtResource("4_nhmw0")
+
+[node name="3" type="Sprite2D" parent="Symbols" unique_id=188966633]
+visible = false
+texture = ExtResource("5_1ey2t")
+
+[node name="4" type="Sprite2D" parent="Symbols" unique_id=1775305198]
+visible = false
+texture = ExtResource("6_ifyd4")
+
+[node name="5" type="Sprite2D" parent="Symbols" unique_id=1816960666]
+visible = false
+texture = ExtResource("7_qdwne")
+
+[node name="6" type="Sprite2D" parent="Symbols" unique_id=669708776]
+visible = false
+texture = ExtResource("8_cgj18")
+
+[node name="7" type="Sprite2D" parent="Symbols" unique_id=1192281690]
+visible = false
+texture = ExtResource("9_j11j7")
+
+[node name="8" type="Sprite2D" parent="Symbols" unique_id=921443189]
+visible = false
+texture = ExtResource("10_70g5x")
+
+[node name="9" type="Sprite2D" parent="Symbols" unique_id=1434033137]
+visible = false
+texture = ExtResource("11_ifyd4")
+
+[node name="10" type="Sprite2D" parent="Symbols" unique_id=160400149]
+visible = false
+texture = ExtResource("12_qdwne")
+
+[node name="11" type="Sprite2D" parent="Symbols" unique_id=112766503]
+visible = false
+texture = ExtResource("13_qdwne")
+
+[node name="12" type="Sprite2D" parent="Symbols" unique_id=755299696]
+visible = false
+texture = ExtResource("14_cgj18")
+
+[node name="13" type="Sprite2D" parent="Symbols" unique_id=1210259706]
+visible = false
+texture = ExtResource("15_j11j7")
+
+[node name="14" type="Sprite2D" parent="Symbols" unique_id=438661237]
+visible = false
+texture = ExtResource("15_70g5x")
+
+[node name="15" type="Sprite2D" parent="Symbols" unique_id=499415056]
+visible = false
+texture = ExtResource("17_he1bx")
+
+[node name="16" type="Sprite2D" parent="Symbols" unique_id=394611392]
+visible = false
+texture = ExtResource("18_iu5kr")
+
+[node name="17" type="Sprite2D" parent="Symbols" unique_id=880937260]
+visible = false
+texture = ExtResource("19_0mteb")
+
+[node name="18" type="Sprite2D" parent="Symbols" unique_id=1444771352]
+visible = false
+texture = ExtResource("20_1aobd")
+
+[node name="19" type="Sprite2D" parent="Symbols" unique_id=119590623]
+visible = false
+texture = ExtResource("21_wovnc")
+
+[node name="PulsePlayer" type="AnimationPlayer" parent="." unique_id=2111495054]
+libraries/ = SubResource("AnimationLibrary_ifyd4")

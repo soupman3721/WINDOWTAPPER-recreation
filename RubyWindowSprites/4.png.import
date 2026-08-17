@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpgsk4y46oioh"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://d0p66yelexvor"
+path="res://.godot/imported/4.png-8d59af487030c6f85443dacce1b07e0f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://RubyWindowSprites/4.png"
+dest_files=["res://.godot/imported/4.png-8d59af487030c6f85443dacce1b07e0f.ctex"]
 
 [params]
 

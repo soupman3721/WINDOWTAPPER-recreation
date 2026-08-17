@@ -16,11 +16,14 @@ var step: int = 0:
 
 #func _unhandled_input(event: InputEvent) -> void:
 	#if !event.is_pressed(): return
-	#$Windows/Magenta.execute_event(event.as_text())
+	#$Windows/Purple.execute_event(event.as_text())
 
 func _ready() -> void:
 	step_hit.emit(step, section)
 	$Positions.position = Vector2(DisplayServer.screen_get_size(DisplayServer.window_get_current_screen())) / 2 - $Positions.size / 2
+	
+	# sends the main window off the screen (pretty sure we're not getting 100K resolution monitors anytime soon)
+	get_window().position = Vector2i(100000, 100000)
 	
 	for i in range(3):
 		await get_tree().physics_frame # for some reason, the windows won't align properly if this isn't here

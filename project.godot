@@ -32,8 +32,3 @@ window/per_pixel_transparency/allowed=true
 [physics]
 
 common/enable_object_picking=false
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

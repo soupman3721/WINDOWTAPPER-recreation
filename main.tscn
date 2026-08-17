@@ -211,6 +211,11 @@ offset_bottom = 100.0
 max_value = 1.0
 step = 0.0
 
+[node name="Label" type="Label" parent="." unique_id=980541539]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "main window lol"
+
 [connection signal="step_hit" from="." to="." method="_on_step_hit"]
 [connection signal="finished" from="Wavetapper" to="." method="_on_wavetapper_finished"]
 [connection signal="drag_ended" from="Debug/SongPosition" to="." method="_on_song_position_drag_ended"]

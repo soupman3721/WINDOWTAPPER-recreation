@@ -160,9 +160,19 @@ color = Color(1, 1, 1, 0.39215687)
 polygon = PackedVector2Array(50, 75, 75, 50, 25, 0, 75, -50, 50, -75, 0, -25, -50, -75, -75, -50, -25, 0, -75, 50, -50, 75, 0, 25)
 metadata/_edit_lock_ = true
 
-[node name="Exclamation" type="Polygon2D" parent="Symbols" unique_id=1545534142]
+[node name="Exclamation" type="Node2D" parent="Symbols" unique_id=1461237201]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(100, 100)
+metadata/_edit_lock_ = true
+
+[node name="Exclamation" type="Polygon2D" parent="Symbols/Exclamation" unique_id=1545534142]
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(-40, -60, -40, 25, -40, 70, -40, 70, -10, 70, -10, 40, -40, 40, -40, 25, -10, 25, -10, -60)
+
+[node name="Exclamation2" type="Polygon2D" parent="Symbols/Exclamation" unique_id=68946612]
+scale = Vector2(-1, 1)
+color = Color(1, 1, 1, 0.39215687)
+polygon = PackedVector2Array(-40, -60, -40, 25, -40, 70, -40, 70, -10, 70, -10, 40, -40, 40, -40, 25, -10, 25, -10, -60)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1943230844]
 libraries/ = SubResource("AnimationLibrary_ytq5f")
